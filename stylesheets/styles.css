@@ -98,7 +98,7 @@ h1 > span { color: var(--accent); }
 .toolkit { font-size: 14px; margin-bottom: 30px; }
 .language-level { color: var(--muted); font-size: 13px; }
 .language-separator { margin: 0 16px; }
-.background-section > div:last-child > p:last-child { font-size: 14px; }
+.background-section .toolkit:last-child { margin-bottom: 0; }
 footer { border-top: 1px solid var(--line); padding: 26px 0 32px; display: flex; align-items: center; gap: 28px; font-size: 12px; }
 footer p:first-child { color: var(--ink); }
 footer p span { color: var(--muted); margin-left: 8px; }
