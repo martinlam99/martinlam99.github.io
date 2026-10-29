@@ -65,6 +65,7 @@ h1 > span { color: var(--accent); }
 .publications li + li { margin-top: 12px; }
 .publications a, .publications .card { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 19px 22px; background: #fff; border: 1px solid var(--line); border-radius: 8px; transition: border-color .18s ease, background .18s ease; }
 .publications a:hover { background: #f5f8ff; border-color: #9ab4dc; text-decoration: none; }
+.publications .card .badge { margin-left: 12px; white-space: nowrap; }
 .publications .card.has-demo { flex-wrap: wrap; }
 .gan-demo { flex-basis: 100%; display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; padding-top: 18px; border-top: 1px solid var(--line); }
 .gan-canvas { width: 224px; max-width: 100%; aspect-ratio: 1; background: #f5f8ff; border: 1px dashed #9ab4dc; border-radius: 6px; }

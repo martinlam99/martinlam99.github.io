@@ -73,7 +73,7 @@
       status.textContent = 'Generated from random noise in your browser.';
     } catch (err) {
       console.error(err);
-      status.textContent = 'Could not run the model. Try reloading the page.';
+      status.textContent = 'Could not run the model (' + (err && err.message ? err.message : err) + '). Try reloading the page.';
     } finally {
       button.disabled = false;
     }

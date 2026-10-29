@@ -16,22 +16,27 @@ class Generator(nn.Module):
     def __init__(self, latent_dim=100):
         super().__init__()
 
-        self.lin1 = nn.Linear(latent_dim, 256 * 4 * 4)
+        self.lin1 = nn.Linear(latent_dim, 512 * 4 * 4)
+        self.bn0 = nn.BatchNorm2d(512)
 
-        self.ct1 = nn.ConvTranspose2d(256, 128, kernel_size=4, stride=2, padding=1)
-        self.bn1 = nn.BatchNorm2d(128)
+        self.ct1 = nn.ConvTranspose2d(512, 256, kernel_size=4, stride=2, padding=1)
+        self.bn1 = nn.BatchNorm2d(256)
 
-        self.ct2 = nn.ConvTranspose2d(128, 64, kernel_size=4, stride=2, padding=1)
-        self.bn2 = nn.BatchNorm2d(64)
+        self.ct2 = nn.ConvTranspose2d(256, 128, kernel_size=4, stride=2, padding=1)
+        self.bn2 = nn.BatchNorm2d(128)
 
-        self.ct3 = nn.ConvTranspose2d(64, 1, kernel_size=4, stride=2, padding=1)
+        self.ct3 = nn.ConvTranspose2d(128, 64, kernel_size=4, stride=2, padding=1)
+        self.bn3 = nn.BatchNorm2d(64)
+
+        self.ct4 = nn.ConvTranspose2d(64, 3, kernel_size=4, stride=2, padding=1)
 
     def forward(self, z):
-        x = F.relu(self.lin1(z))
-        x = x.view(z.size(0), 256, 4, 4)
-        x = F.relu(self.bn1(self.ct1(x)))  # [1, 128, 8, 8]
-        x = F.relu(self.bn2(self.ct2(x)))  # [1, 64, 16, 16]
-        return tanh(self.ct3(x))           # [1, 1, 32, 32], values in [-1, 1]
+        x = self.lin1(z).view(z.size(0), 512, 4, 4)
+        x = F.relu(self.bn0(x))            # [1, 512, 4, 4]
+        x = F.relu(self.bn1(self.ct1(x)))  # [1, 256, 8, 8]
+        x = F.relu(self.bn2(self.ct2(x)))  # [1, 128, 16, 16]
+        x = F.relu(self.bn3(self.ct3(x)))  # [1, 64, 32, 32]
+        return tanh(self.ct4(x))           # [1, 3, 64, 64], values in [-1, 1]
 
 
 def main(ckpt_path, out_path):
