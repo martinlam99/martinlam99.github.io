@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Martin Lam - Computer Science Student at Lund University</title>
+  <meta name="description" content="Martin Lam, M.Sc. Computer Science and Engineering student at Lund University. Machine learning and embedded systems. Based in Lund, Sweden.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <script src="javascripts/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="shell">
+    <header class="topbar">
+      <a class="wordmark" href="#home" aria-label="Martin Lam, home">ml<span aria-hidden="true">.</span></a>
+      <!-- TODO: replace the LinkedIn placeholder URL with your own -->
+      <nav aria-label="Main navigation"><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="https://www.linkedin.com/in/TODO-your-linkedin/">LinkedIn <span aria-hidden="true">↗</span></a></nav>
+    </header>
+    <main id="main">
+      <section class="hero" id="home" aria-labelledby="name">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>Computer Science student <span class="hero-location">/ Lund, Sweden</span></p>
+        <h1 id="name">Martin Lam<span aria-hidden="true">.</span></h1>
+        <p class="role">M.Sc. Computer Science &amp; Engineering <span>at Lund University</span></p>
+        <p class="intro">Graduating student specializing in<span>machine learning</span><br class="desktop-break"> and software development.</p>
+        <nav class="social-links" aria-label="Find me online">
+          <a href="https://www.linkedin.com/in/martin-lam-b849b92a0">LinkedIn <span aria-hidden="true">↗</span></a>
+          <a href="mailto:martinl99@hotmail.se">Email <span aria-hidden="true">↗</span></a>
+        </nav>
+      </section>
+      <section class="section-layout" id="experience" aria-labelledby="experience-title">
+        <div class="section-heading"><p class="eyebrow">01 / Journey</p><h2 id="experience-title">Experience</h2><p>From camera firmware<br> to planetary exploration.</p></div>
+        <div class="timeline">
+          <article class="job current">
+            <div class="job-heading"><h3>European Space Agency</h3><span class="badge">Upcoming</span></div>
+            <p class="job-role">Machine Learning Intern</p><p class="metadata">Dec 2026 - <span>Cologne, Germany</span></p>
+            <p>Will develop and improve multi-modal machine learning models for real-time mineral recognition in planetary exploration of the Moon and Mars.</p>
+            <ul class="tags" aria-label="Focus areas"><li>Machine learning</li><li>Multi-modal models</li><li>Planetary exploration</li></ul>
+          </article>
+          <article class="job"><h3>Axis Communications</h3><p class="job-role">Software Engineer Intern</p><p class="metadata">Jun 2026 - Aug 2026 <span>Lund, Sweden</span></p><p>Developed an ESP32-based bridge that lets USB peripherals, including keyboards, mice, and Bluetooth devices, interface with cameras, handling data transmission for on-device interpretation.</p><ul class="tags" aria-label="Focus areas"><li>ESP32</li><li>USB</li><li>Bluetooth</li></ul></article>
+          <article class="job"><h3>Axis Communications</h3><p class="job-role">Student Worker, Multichannel Product Firmware</p><p class="metadata">Sep 2025 - Jun 2026 <span>Lund, Sweden</span></p><p>Developed and deployed an image auto-leveling system that uses a single accelerometer to control camera motors. Prototyped in Python, then fully implemented in embedded C++ via the Yocto Project.</p><ul class="tags" aria-label="Focus areas"><li>Python</li><li>Embedded C++</li><li>Yocto</li></ul></article>
+          <article class="job"><h3>Axis Communications</h3><p class="job-role">Software Engineer Intern</p><p class="metadata">Jun 2025 - Aug 2025 <span>Lund, Sweden</span></p><p>Collaborated with the Multichannel Products Firmware and Quality Assurance departments to enhance and extend automated Python test suites for multichannel camera products, broadening test coverage for reliable daily execution and consistent product validation.</p><ul class="tags" aria-label="Focus areas"><li>Python</li><li>Test automation</li></ul></article>
+        </div>
+      </section>
+      <section class="section-layout" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading"><p class="eyebrow">02 / Work</p><h2 id="projects-title">Building<br> things.</h2><p>Projects &amp; involvement</p></div>
+        <div>
+          <h3 class="subheading">Projects</h3>
+          <ul class="publications">
+            <li><div class="card has-demo"><span><span class="metadata">PyTorch · Deep learning</span><span class="publication-title">Generative AI Image Generator</span><span class="publication-note">Built a Least Squares Generative Adversarial Network (LSGAN) from scratch, with custom convolutional generator and discriminator architectures and a least-squares loss for more stable training than standard GAN objectives. Trained and evaluated it across multiple image datasets, tuning learning rate, batch size, and network depth to improve convergence and sample quality.</span></span>
+              <div class="gan-demo"><canvas id="gan-canvas" class="gan-canvas" width="32" height="32" role="img" aria-label="Image generated by the GAN"></canvas><div class="gan-controls"><button type="button" id="gan-generate" class="gan-button">Generate image</button><p id="gan-status" class="gan-status" aria-live="polite">Runs the trained generator live in your browser. The first click loads the model.</p></div></div></div></li>
+            <li><div class="card"><span><span class="metadata">Java · Spring · HTML/CSS</span><span class="publication-title">Race Registration</span><span class="publication-note">A Java application that stores and transmits data to a REST server, with a web interface built in HTML and CSS to register, display, and change race entries.</span></span></div></li>
+          </ul>
+          <h3 class="subheading paper-heading">Involvement</h3>
+          <ul class="patents">
+            <li><span class="metadata">Lund Aerospace and Rocketry Association</span><span class="patent-title"><strong>Embedded Firmware Engineer.</strong> Developing embedded firmware for a custom rocket telemetry and avionics system using ESP32, RF communication modules, and onboard sensors. C++, PlatformIO.</span></li>
+            <li><span class="metadata">ARKAD Career Fair</span><span class="patent-title"><strong>Company Host.</strong> Responsible for a company during ARKAD, Scandinavia&rsquo;s largest career fair, assisting them throughout the fair and providing information.</span></li>
+          </ul>
+        </div>
+      </section>
+      <section class="section-layout background-section" aria-labelledby="background-title">
+        <div class="section-heading"><p class="eyebrow">03 / Foundations</p><h2 id="background-title">Background</h2></div>
+        <div><h3 class="subheading">Education</h3><div class="education"><article><h4>Lund University, Faculty of Engineering (LTH)</h4><p>M.Sc. Computer Science and Engineering, specializing in Software Development</p><p class="metadata">Aug 2022 - Jun 2027</p></article></div><h3 class="subheading">Coursework</h3><p class="toolkit">Algorithms &amp; Data Structures · Functional Programming · Multi-threaded Programming · Large-scale Software Development · Applied Machine Learning · Advanced Applied Machine Learning · Computer Vision · Natural Language Processing · Efficient C · C++ · Databases</p><h3 class="subheading">Toolkit</h3><p class="toolkit">Java · Python · C · C++ · SQL · PyTorch · NumPy · Scikit-learn · Git · Linux · Jenkins · Gerrit · Jira · Favro · PlatformIO</p><h3 class="subheading">Languages</h3><p>Swedish <span class="language-level">/ Native</span><span class="language-separator">·</span> English <span class="language-level">/ Fluent</span></p></div>
+      </section>
+    </main>
+    <!-- TODO: replace the LinkedIn placeholder URL with your own -->
+    <footer><p>Martin Lam <span>/ Lund</span></p><a href="https://www.linkedin.com/in/martin-lam-b849b92a0">Let’s connect <span aria-hidden="true">↗</span></a><p class="hosting">Hosted on GitHub Pages</p></footer>
+  </div>
+</body>
+</html>
